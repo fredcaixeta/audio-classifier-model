@@ -3,44 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Frederico Caixeta Portfolio</title>
     <style>
         body {
-            font-family: sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            background-color: #121212;
+            color: #e0e0e0;
         }
         .container {
-            text-align: center;
-            background-color: white;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        h1 {
-            color: #333;
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #a0a0a0;
+        }
+        main {
+            margin-bottom: 60px;
+        }
+        h2 {
+            font-size: 2em;
+            color: #ffffff;
+            border-bottom: 2px solid #03dac6;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        .about-me p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .about-me ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .about-me li {
+            background-color: #1e1e1e;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1em;
+            border: 1px solid #333;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+        }
+        .project {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+        }
+        .project h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #ffffff;
         }
         iframe {
-            margin-top: 20px;
+            width: 100%;
+            height: 450px;
+            border: none;
             border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            background-color: #1e1e1e;
+            border-top: 1px solid #333;
+        }
+        footer p {
+            margin: 0;
+            color: #a0a0a0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Project "Identifying Deepfake Content"</h1>
-        <h1>hosted on Hugging Face Spaces</h1>
-        <p>Find more in https://huggingface.co/spaces/fredcaixeta</p>
-        <iframe
-            src="https://fredcaixeta-is-audio-ai-generated.hf.space"
-            frameborder="0"
-            width="850"
-            height="450"
-        ></iframe>
+        <header>
+            <h1>Frederico Caixeta</h1>
+            <p>AI & Machine Learning Engineer</p>
+        </header>
+
+        <main>
+            <section class="about-me">
+                <h2>About Me</h2>
+                <p>I am a software engineer specializing in Artificial Intelligence and Machine Learning, dedicated to building safer and more inclusive technology. My career covers the development of deepfake detection solutions, prompt-injection defense systems, AI models for audio deepfake detection, and fact-checking agents fighting misinformation. I am also passionate about accessibility, with experience building sign language (Libras) translation programs to make technology more inclusive for the deaf and hard-of-hearing communities.</p>
+                <h3>My main focus areas include:</h3>
+                <ul>
+                    <li>LLM safety guardrails</li>
+                    <li>Development of AI agents and Retrieval Augmented Generation systems (Traditional and GraphRAG)</li>
+                    <li>Fraud detection using Graph Neural Networks and Neo4j databases</li>
+                    <li>Intelligent vector search solutions with Weaviate</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Projects</h2>
+                <div class="projects">
+                    <div class="project">
+                        <h3>Fake News Agent Detector</h3>
+                        <iframe src="https://fredcaixeta-fake-news-agent-detector.hf.space" frameborder="0"></iframe>
+                    </div>
+                    <div class="project">
+                        <h3>Identifying Deepfake Content</h3>
+                        <iframe src="https://fredcaixeta-is-audio-ai-generated.hf.space" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Felipe Caixeta. All Rights Reserved.</p>
+            <p>Feel free to connect with me on <a href="https://www.linkedin.com/in/frederico-caixeta-engineer/">LinkedIn</a>, check out my <a href="https://github.com/fredcaixeta">GitHub</a>, or see my other projects on <a href="http://huggingface.co/spaces/fredcaixeta">Hugging Face Spaces</a>.</p>
+        </footer>
     </div>
 </body>
 </html>
